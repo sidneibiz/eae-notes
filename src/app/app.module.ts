@@ -1,40 +1,31 @@
 
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { AppComponent } from './app.component';
-
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { ROUTES } from './app.routes';
-import { SideBarComponent } from './shared/side-bar/side-bar.component';
-import { LoginComponent } from './features/login/login.component';
-import {MatSelectModule} from '@angular/material/select';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import { NotesAreaComponent } from './features/notes-area/notes-area.component';
+import { AppComponent } from './app.component';
 import { AppGuard } from './app.guard';
+import { ROUTES } from './app.routes';
+import { FeaturesModule } from './features/features.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SideBarComponent,
-    LoginComponent,
-    NotesAreaComponent,
   ],
   imports: [
     RouterModule,
     RouterModule.forRoot(ROUTES),
     BrowserModule,
     BrowserAnimationsModule,
-    MDBBootstrapModule.forRoot(),
     FormsModule,
     MatSelectModule,
+    FeaturesModule,
     MatSidenavModule,
   ],
-  providers: [AppGuard,],
-  exports: [SideBarComponent],
+  providers: [AppGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

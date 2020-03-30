@@ -17,7 +17,17 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "~root/*": ["./*"],
+      "~src/*": ["src/*"],
+      "~app/*": ["src/app/*"],
+      "~core/*": ["src/app/core/*"],
+      "~features/*": ["src/app/features/*"],
+      "~services/*": ["src/app/services/*"],
+      "~shared/*": ["src/app/shared/*"],
+      "~environments/*": ["src/environments/*"]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
