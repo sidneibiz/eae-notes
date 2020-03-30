@@ -13,12 +13,15 @@ import { SideBarComponent } from './shared/side-bar/side-bar.component';
 import { LoginComponent } from './features/login/login.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { NotesAreaComponent } from './features/notes-area/notes-area.component';
+import { AppGuard } from './app.guard';
 
 @NgModule({
   declarations: [
     AppComponent,
     SideBarComponent,
     LoginComponent,
+    NotesAreaComponent,
   ],
   imports: [
     RouterModule,
@@ -30,7 +33,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatSelectModule,
     MatSidenavModule,
   ],
-  providers: [],
+  providers: [AppGuard,],
   exports: [SideBarComponent],
   bootstrap: [AppComponent]
 })

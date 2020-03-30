@@ -10,6 +10,8 @@ export class AppGuard implements CanLoad, CanActivate, CanDeactivate<AppComponen
     }
 
     canActivate(activatedRouteSnapshot: ActivatedRouteSnapshot, routeStateSnapshot: RouterStateSnapshot): boolean {
+        debugger;
+        console.log("Verify autentication here!");
         return true;
     }
 
