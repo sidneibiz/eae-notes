@@ -1,0 +1,21 @@
+sudo: required
+
+dist: trusty
+
+addons:
+  chrome: stable
+
+language: node_js
+
+node_js:
+  - 10
+
+before_:
+  - npm install
+  - npm install @types/dragula@2.1.33 --save-dev
+  - npm install -g typings
+
+:
+  - echo "init build"
+  - npm run build
+  - npm run lint
