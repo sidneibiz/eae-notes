@@ -6,16 +6,24 @@ import { AppComponent } from './app.component';
 export class AppGuard implements CanLoad, CanActivate, CanDeactivate<AppComponent> {
 
     canLoad(route: Route): boolean {
+        /*
+            route: Route
+        */
         return true;
     }
 
-    canActivate(activatedRouteSnapshot: ActivatedRouteSnapshot, routeStateSnapshot: RouterStateSnapshot): boolean {
-        debugger;
+    canActivate(): boolean {
+        /*
+            activatedRouteSnapshot: ActivatedRouteSnapshot, routeStateSnapshot: RouterStateSnapshot
+        */
         console.log('Verify autentication here!');
         return true;
     }
 
-    canDeactivate(FormComponent: AppComponent ,activatedRouteSnapshot: ActivatedRouteSnapshot, routeStateSnapshot: RouterStateSnapshot): boolean {
+    canDeactivate(): boolean {
+        /*
+            FormComponent: AppComponent ,activatedRouteSnapshot: ActivatedRouteSnapshot, routeStateSnapshot: RouterStateSnapshot
+        */
         return true;
     }
 
