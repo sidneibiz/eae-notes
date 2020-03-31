@@ -1,8 +1,5 @@
 
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { MatSelectModule } from '@angular/material/select';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
@@ -20,10 +17,7 @@ import { FeaturesModule } from './features/features.module';
     RouterModule.forRoot(ROUTES),
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule,
-    MatSelectModule,
     FeaturesModule,
-    MatSidenavModule,
   ],
   providers: [AppGuard],
   bootstrap: [AppComponent]
