@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 @Injectable()
 export class AppGuard implements CanLoad, CanActivate, CanDeactivate<AppComponent> {
 
-    canLoad(route: Route): boolean {
+    canLoad(): boolean {
         /*
             route: Route
         */
