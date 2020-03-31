@@ -1,5 +1,5 @@
-import { Injectable } from "@angular/core";
-import { ActivatedRouteSnapshot, CanActivate, CanDeactivate, CanLoad, Route, RouterStateSnapshot } from "@angular/router";
+import { Injectable } from '@angular/core';
+import { ActivatedRouteSnapshot, CanActivate, CanDeactivate, CanLoad, Route, RouterStateSnapshot } from '@angular/router';
 import { AppComponent } from './app.component';
 
 @Injectable()
@@ -11,7 +11,7 @@ export class AppGuard implements CanLoad, CanActivate, CanDeactivate<AppComponen
 
     canActivate(activatedRouteSnapshot: ActivatedRouteSnapshot, routeStateSnapshot: RouterStateSnapshot): boolean {
         debugger;
-        console.log("Verify autentication here!");
+        console.log('Verify autentication here!');
         return true;
     }
 

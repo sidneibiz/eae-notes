@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mdb-angular-free": {
+    "eae-notes": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mdb-angular-free",
+            "outputPath": "dist/eae-notes",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,18 +75,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mdb-angular-free:build"
+            "browserTarget": "eae-notes:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mdb-angular-free:build:production"
+              "browserTarget": "eae-notes:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mdb-angular-free:build"
+            "browserTarget": "eae-notes:build"
           }
         },
         "test": {
@@ -123,18 +123,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "mdb-angular-free:serve"
+            "devServerTarget": "eae-notes:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "mdb-angular-free:serve:production"
+              "devServerTarget": "eae-notes:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "mdb-angular-free",
+  "defaultProject": "eae-notes",
   "cli": {
     "analytics": "86da140c-1625-463f-8808-35cc138c8c90"
   }
