@@ -1,0 +1,13 @@
+dist: trusty
+
+addons:
+  chrome: stable
+
+language: node_js
+
+node_js:
+  - 10
+
+script:
+  - npm run build
+  - npm run lint
